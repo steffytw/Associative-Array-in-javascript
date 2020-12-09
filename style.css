@@ -1,0 +1,54 @@
+/*-------------------Roboto font------------------------------------*/
+@font-face {
+	src: url(fonts/roboto/Roboto-Regular.ttf);
+	font-family: 'Roboto';
+}
+/*header*/
+
+.book1{
+	color: blue;
+}
+.book2{
+	color: red;
+}
+.grey-clr{
+	color: #ccc;
+	font-size: 12px;
+}
+.darkgrey-clr{
+	color: grey;
+	font-size: 18px;
+}
+.header{
+	margin-top: 5px;
+}
+.grey-shade{
+	color: #808080;
+	font-size: 13px;
+	font-weight: 400 !important;
+}
+.btn-primary {
+    margin-top: 28px;
+}
+.table-details {
+    margin-top: 35px;
+    width: 100%;
+    float: left;
+    padding: 10px;
+}
+.table-head{
+	background-color: rgb(245,248,250);
+	color: grey;
+}
+.table-details td {
+    padding: 5px 20px 5px 20px !important;
+}
+input#search {
+    margin-top: 10px;
+}
+.btn-info {
+    margin-top: 9px;
+}
+.head-blue{
+	color: blue;
+}
