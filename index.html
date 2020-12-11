@@ -94,9 +94,6 @@
 							<option selected="Historical Fiction">Historical Fiction</option>
 							<option>Action and Adventure</option>
 							<option>Comic Book or Graphic Novel</option>
-							
-							<option></option>
-							<option></option>
 						</select>	
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-3">
@@ -141,8 +138,41 @@
 		<p id="sortval"></p>
 		<p id="delVal"></p>
 		<p id="findVal"></p>
-	</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12"><strong class="head-blue">Multiselect</strong></div>
 
-	<script type="text/javascript" src="book.js"></script>
+			<div class="col-lg-4 col-md-4 col-sm-3">
+				<label for="multiselectType" class="grey-shade">Type</label>
+				<div class="multiselect">
+					
+				    <div class="selectBox" onclick="showCheckboxes()">
+				    	<ul id="selectList"></ul>
+				      <select class="form-control" id="selectInfo">
+				        <option>Select Type of Books</option>
+				      </select>
+				      <!-- <input type="text" name="searchMulti" class="form-control" placeholder="Search type"> -->
+				      <div class="overSelect"></div>
+				    </div>
+				    <div id="checkboxes">
+				      <label>
+				        <input type="checkbox" id="typeSelected" onclick="selectedData(this)" value="Classics">&nbsp Classics</label>
+				      <label>
+				        <input type="checkbox" id="typeSelected" onclick="selectedData(this)" value="Horror">&nbsp Horror</label>
+				      <label>
+				        <input type="checkbox" id="typeSelected"onclick="selectedData(this)" value="Fiction">&nbsp Fiction</label>
+				        <label>
+				        <input type="checkbox" id="typeSelected"onclick="selectedData(this)" value="Fantasy">&nbsp Fantasy</label>
+				      <label>
+				        <input type="checkbox" id="typeSelected"onclick="selectedData(this)" value="Detective and Mystery">&nbsp Detective and Mystery</label>
+				      <label>
+				        <input type="checkbox" id="typeSelected"onclick="selectedData(this)" value="Historical Fiction">&nbsp Historical Fiction</label>
+				    </div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+<!-- script -->
+<script type="text/javascript" src="book.js"></script>
 </body>
 </html>

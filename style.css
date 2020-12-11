@@ -13,7 +13,7 @@
 }
 .grey-clr{
 	color: #ccc;
-	font-size: 12px;
+	font-size: 18px !important;
 }
 .darkgrey-clr{
 	color: grey;
@@ -51,4 +51,54 @@ input#search {
 }
 .head-blue{
 	color: blue;
+}
+
+/*multi select*/
+
+
+.multiselect {
+  width: 400px;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
+li{
+	display: inline-block;
+	padding: 5px;
+	color: white;
+	background-color: #0069D9;
+	margin-left: 4px;
+}
+.list-group{
+  display: inline-block;
+}
+.list-group-item{
+  display: inline-block;
 }

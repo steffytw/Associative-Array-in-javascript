@@ -321,10 +321,10 @@ function findElement(){ // find array value
 	var findData=bookDetails.find(findElementInTheArray);
 	console.log("find Data : ",findData);
 	if (findData.title==search){
-		document.getElementById("findVal").innerHTML="<strong> Found the value in the book array</strong>"+JSON.stringify(findData);
+		document.getElementById("findVal").innerHTML="<strong> Found the title in the book array</strong>"+JSON.stringify(findData);
 	}
 	else{
-		document.getElementById("findVal").innerHTML="<strong> This value is not in the book array</strong>";
+		document.getElementById("findVal").innerHTML="<strong> This title is not in the book array</strong>";
 	}
 }
 function findElementInTheArray(bookDetails){ // check array value
@@ -349,10 +349,9 @@ function filterTableData() { //filter table
 	      	}
 	    }       
   	}
-  	// document.getElementById("search").value="";
 }
 
-function TableSort(n) { //sort
+function TableSort(n) { 
   // sort array
  	bookDetails.sort(function(a, b) {
    		var x = a.title.toLowerCase(); 
@@ -405,3 +404,54 @@ function TableSort(n) { //sort
 
 
 
+// -------------------------------------------multiselect--------------------------------------------------------------
+
+
+
+var expanded = false;
+
+function showCheckboxes() {
+	var checkboxes = document.getElementById("checkboxes");
+	if (!expanded) {
+		checkboxes.style.display = "block";
+		expanded = true;
+	} else {
+		checkboxes.style.display = "none";
+		expanded = false;
+	}
+	
+}
+
+function selectedData(e){
+	if (e.checked==true ){
+		document.getElementById('selectInfo').style.display='none';
+		console.log("passed selected value : ",e)
+		var ul=document.getElementById('selectList');
+		var li = document.createElement("li");
+		ul.setAttribute('class','form-control');
+		li.setAttribute('id',e.value);
+		li.appendChild(document.createTextNode(e.value));
+		console.log("selected value : ",e.value);
+		ul.appendChild(li);
+	}
+	else{
+		alert('deselected !');
+		deleteList();
+	}
+}
+function deleteList(){
+	var listItems = document.getElementsByTagName("li"); 
+	console.log("list listItems.length",listItems.length);
+	for (var i = 0; i < listItems.length; i++) {
+		console.log("list",listItems[i]);
+		console.log("list value",listItems[i].value);
+		var listValue = listItems[i].firstChild.data;
+		console.log("value in list : ",listValue);
+
+		listItems[i].onclick= function() {
+			alert("inside list deletion");
+			console.log(this.parentNode.removeChild(this));
+		}
+	}
+
+}
